@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    align-items: center;
+  
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    img {
+      width: 30px; 
+      height: 30px;
+      filter: invert(60%);
+    }
+  
+    span {
+      font-size: 14px; 
+    }
+
+    .liked {
+        img {
+          filter: invert(100%) saturate(200%) hue-rotate(120deg);  
+        }
+      }
+    
+    .disliked {
+        img {
+          filter: invert(100%);  
+        }
+      }
+  }

@@ -1,0 +1,147 @@
+.postCard {
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #000116;  
+  transition: transform 1s ease;
+}
+
+.inactiveStatus {
+  color: #ccc;
+  background-color: #112535;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 10px; 
+  margin-left: 90%;
+}
+
+.postTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e2e2e2;
+}
+
+.authorSection {
+  display: flex;
+  color: #e2e2e2;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.authorAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #e2e2e2;
+  border: 2px solid #cccccc;
+}
+
+.categories {
+  margin-top: 10px;
+  color: #e2e2e2;  
+}
+
+.content {
+  margin-top: 10px;
+  color: #e2e2e2;  
+}
+
+.reactions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  align-items: flex-end;
+
+  span {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: #e2e2e2;  
+  }
+}
+
+.publishDate {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.visitButton {
+  margin-top: 10px;
+  background-color: #5a5a5a;
+  color: #e2e2e2;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0f355f;
+  }
+}
+
+.optionsContainer {
+  position: relative;
+}
+
+.optionsIcon {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 90%;
+  font-size: 20px;
+  width: fit-content;
+  border-radius: 5px;
+  color: #ccc;
+  background-color: #5a5a5a;
+  margin-bottom: 7px;
+}
+
+.optionsMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #cfcfcf;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+
+  div {
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #9c9c9c;
+    }
+  }
+}
+
+.categoriesContainer {
+  margin-top: 12px;
+  margin-bottom: 22px;
+  display: flex;
+  gap: 8px; 
+  flex-wrap: wrap;
+}
+
+.categoryBlock {
+  padding: 8px;
+  background-color: rgb(17, 37, 53);
+  color: #e7e7e7;
+  border-radius: 8px;  
+}
+
+.reactionImg {
+    width: 30px; 
+    height: 30px;
+    filter: invert(60%);
+}

@@ -1,0 +1,30 @@
+.userItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:rgb(210, 210, 210);
+    background-color: #000116;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .userInfo {
+    flex-grow: 1;
+  }
+  
+  .infoItem {
+    margin-bottom: 5px;
+  }
+  
+  .avatarContainer {
+    margin-left: 10px;
+  }
+  
+  .authorAvatar {
+    width: 50px;  
+    background-color: rgb(188, 188, 188);
+    height: 50px;
+    border-radius: 50%;
+  }
+

@@ -1,0 +1,46 @@
+.sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  hr {
+    color: #696969;
+    width: 70%;
+  }
+  
+  .sidebar ul {
+    margin-left: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .open {
+    width: 250px;
+  }
+  
+  .closeButton {
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }

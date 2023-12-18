@@ -1,0 +1,22 @@
+.usersPage {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; 
+    margin-top: 4vh;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .usersHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .userList {
+    display: grid;
+    gap: 10px;
+  }
+
+  .decor {
+    text-decoration: none;
+  }

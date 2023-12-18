@@ -1,0 +1,61 @@
+
+.postsContainer {
+    max-width: 800px;
+    margin-top: 8vh; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+ 
+  .postsContainer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 16px;  
+  }
+
+  .mypostsContainer {
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .mypostsh {
+
+    color: rgb(229, 229, 229);
+  }
+
+  .filterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  
+ 
+  .selectInput {
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #535353;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+ 
+  .selectInput option {
+    background-color: #333;
+    color: #fff;
+  }
+  
+
+  .searchInput {
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #535353;
+    color: #dedede;
+  }
+
+  .searchInput::placeholder {
+    color: #dbdbdb; 
+  }
+  

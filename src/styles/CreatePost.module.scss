@@ -1,0 +1,79 @@
+.createPostContainer {
+    max-width: 50vw;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column; 
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .title {
+        border: none;
+        width: 95%;
+        color:  #e7e7e7;
+        background-color: black;
+        padding: 10px;
+        margin: 20px auto;
+        margin-top: 20px;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+
+    button {
+      font-size: 16px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: rgb(17, 37, 53);
+      color:  #e7e7e7;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    
+      &:hover {
+        background-color: #0f355f;
+      }
+    }
+  }
+
+  .quillContainer {
+    margin-top: 40px;
+    max-height: 50vh;
+    border-radius: 7px;
+    overflow-y: auto;
+    color: white
+  }
+
+
+  .categoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .category {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 4px;
+    cursor: pointer;
+    background-color: rgb(17, 37, 53);
+    color: #e7e7e7;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #656565;
+    }
+  
+    &.selected {
+      background-color: #686868;
+    }
+  }

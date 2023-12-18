@@ -1,0 +1,101 @@
+.postPage {
+    max-width: 800px;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  .commentList {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #000116;
+  }
+  
+  .postCard {
+    background-color: #000116;
+    color:#ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  
+    .postTitle {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    .authorSection {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      .authorAvatar {
+        width: 40px;
+        height: 40px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+  
+      p {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  
+    .categories {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .content {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+  
+     
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .publishDate {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .reactions {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-top: 10px;
+
+      p {
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .categoriesContainer {
+    margin-top: 12px;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 8px; 
+    flex-wrap: wrap;
+  }
+  
+  .categoryBlock {
+    padding: 8px;
+    background-color: rgb(17, 37, 53);
+    color: #e7e7e7;
+    border-radius: 8px;  
+  }
