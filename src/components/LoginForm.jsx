@@ -51,7 +51,7 @@ function LoginForm() {
     <h2 className={styles.sign}>Sign in</h2>
     <form onSubmit={handleSubmit} className={styles.form}>
       <label className={styles.label}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16">
+        <svg className={styles.svgIcon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16">
         <g id="man-people-user" data-iconmelon="Streamline Icon Set:de32eb2621491c1a881a9fe846236da1">
     <g id="Expanded">
       <g>

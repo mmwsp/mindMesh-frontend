@@ -11,7 +11,7 @@ const CommentList = ({ commentsArr }) => {
           if (comment.reply) {
             const index = comments.findIndex((i) => i.id === comment.reply);
       
-            // Проверяем, существует ли comments[index]
+
             if (index !== -1 && comments[index]) {
               comments[index].responses.push(comment);
             }

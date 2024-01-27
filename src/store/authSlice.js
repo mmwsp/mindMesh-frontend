@@ -63,7 +63,6 @@ export const uploadAvatar = createAsyncThunk(
     try {
       const formData = new FormData();
       formData.append('photo', avatar);
-
       const response = await $api.patch(`users/avatar`, formData);
 
       return response.data;
@@ -88,6 +87,15 @@ export const changePassword = createAsyncThunk(
 export const deleteUser = createAsyncThunk('users/deleteUser', async ( userId , { rejectWithValue }) => {
   try {
     const response = await $api.delete(`users/${userId}`);
+    return response.data;
+  } catch (error) {
+    return rejectWithValue(error.response.data);
+  }
+});
+
+export const deleteUserAvatar = createAsyncThunk('users/deleteUserAvatar', async (_, { rejectWithValue }) => {
+  try {
+    const response = await $api.delete(`users/avatar`);
     return response.data;
   } catch (error) {
     return rejectWithValue(error.response.data);
@@ -171,13 +179,13 @@ const authSlice = createSlice({
       .addCase(uploadAvatar.fulfilled, (state, action) => {
         state.user = action.payload;
       })
-      .addCase(changePassword.fulfilled, (state, action) => {
-        //state.user = action.payload;
-      })
       .addCase(deleteUser.fulfilled, (state) => {
         state.user = null;
         state.isAuthenticated = false;
         state.emailConfirmed = false;
+      })
+      .addCase(deleteUserAvatar.fulfilled, (state, action) => {
+        state.user = action.payload;
       })
       .addCase(getUsers.fulfilled, (state, action) => {
         state.users = action.payload;
