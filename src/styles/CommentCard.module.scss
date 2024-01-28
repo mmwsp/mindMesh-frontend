@@ -8,6 +8,7 @@
   
     .commentAuthor {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 10px;
   
@@ -69,6 +70,29 @@
 
   }
 
+  .markBtn {
+    background-color: transparent;
+    color: #b7b7b7;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .markBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .markBtn:focus {
+    outline: none;
+  }
+  
+  .markBtn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
 .repliesContainer {
   background-color: #343434;
     margin-left: 40px;
@@ -122,13 +146,13 @@
 }
 
 .optionsIcon {
-  margin-left: 90%;
+  margin-left: 96%;
   cursor: pointer;
   font-size: 20px;
   width: fit-content;
   border-radius: 5px;
   color: #ccc;
-  background-color: #5a5a5a;
+  background-color: #3c3c3c;
   margin-bottom: 7px;
 }
 

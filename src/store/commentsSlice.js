@@ -45,12 +45,28 @@ export const updateComment = createAsyncThunk(
   }
 );
 
+export const markComment = createAsyncThunk(
+  'comments/markComment',
+  async ({ commentId, postId }) => {
+    const response = await $api.post(`/comments/mark/${commentId}`, { postId });
+    return response.data;
+  }
+);
+
+export const unmarkComment = createAsyncThunk(
+  'comments/unmarkComment',
+  async ({ commentId, postId }) => {
+    const response = await $api.post(`/comments/unmark/${commentId}`, { postId });
+    return response.data;
+  }
+);
+
 
 const commentsSlice = createSlice({
   name: 'comments',
   initialState: {
     list: [],
-    status: 'idle', // idle, loading, succeeded, failed
+    status: 'idle',
     error: null,
   },
   reducers: {},
@@ -94,6 +110,32 @@ const commentsSlice = createSlice({
         
         if (commentIndex !== -1) {
           state.list[commentIndex].content = updatedComment.content;
+        }
+        state.status = 'succeeded';
+      })
+      .addCase(markComment.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.payload;
+      })
+      .addCase(markComment.fulfilled, (state, action) => {
+        const updatedComment = action.payload;
+        const commentIndex = state.list.findIndex(comment => comment.id === updatedComment.id);
+
+        if (commentIndex !== -1) {
+          state.list[commentIndex].marked_as_answer = updatedComment.marked_as_answer;
+        }
+        state.status = 'succeeded';
+      })
+      .addCase(unmarkComment.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.payload;
+      })
+      .addCase(unmarkComment.fulfilled, (state, action) => {
+        const updatedComment = action.payload;
+        const commentIndex = state.list.findIndex(comment => comment.id === updatedComment.id);
+
+        if (commentIndex !== -1) {
+          state.list[commentIndex].marked_as_answer = updatedComment.marked_as_answer;
         }
         state.status = 'succeeded';
       });

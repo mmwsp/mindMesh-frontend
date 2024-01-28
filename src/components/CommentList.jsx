@@ -1,7 +1,7 @@
 import React from 'react';
 import CommentCard from './CommentCard';
 
-const CommentList = ({ commentsArr }) => {
+const CommentList = ({ commentsArr, postId }) => {
 
 
     function getThreadedComments(commentsArr) {
@@ -29,7 +29,7 @@ const CommentList = ({ commentsArr }) => {
   return (
     <div>
         {comments.map((comment) => (
-            <CommentCard key={comment.id} comment={comment}/>
+            <CommentCard key={comment.id} comment={comment} postId={postId}/>
           ))} 
     </div>
   );

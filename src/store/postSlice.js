@@ -1,6 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import $api from '../axiosConfig';
 
+export const selectAuthorIdByPostId = (state, postId) => {
+  const post = state.posts.list.find(post => post.id === postId);
+  return post ? post.author_id : null;
+};
+
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
   const response = await $api.get('/posts');
   return response.data;
@@ -109,3 +114,4 @@ const postSlice = createSlice({
 });
 
 export default postSlice.reducer;
+

@@ -63,7 +63,7 @@ function PostPage() {
             </div>
             <CommentForm postId={postId}/>
           <div className={styles.commentList}>
-            <CommentList commentsArr={comments}/>
+            <CommentList commentsArr={comments} postId={singlePost.id}/>
         </div>
       </div>
     );
